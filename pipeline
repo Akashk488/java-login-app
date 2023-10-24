@@ -19,7 +19,7 @@ pipeline{
         stage ('tomcat_build'){
             steps {
                 sshagent (['tomcat_server']){
-                    sh 'scp -o StrictHostKeyChecking=no target/dptweb.war ec2-user@3.110.186.168:/opt/tomcat9/webapps'
+                    sh 'scp -o StrictHostKeyChecking=no target/dptweb-1.0.war ec2-user@3.110.186.168:/opt/tomcat9/webapps'
                 }
             }
         }
